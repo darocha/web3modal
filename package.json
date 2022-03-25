@@ -17,7 +17,8 @@
     "torus",
     "authereum",
     "frame",
-    "walletlink"
+    "walletlink",
+    "aurox"
   ],
   "author": "Web3Modal <web3modal.com>",
   "license": "MIT",

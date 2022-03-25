@@ -46,6 +46,8 @@ import BlockWalletLogo from "../logos/blockwallet.svg";
 import TallyLogo from "../logos/tally.svg";
 // @ts-ignore
 import PortalLogo from "../logos/portal.svg";
+// @ts-ignore
+import AuroxLogo from "../logos/aurox.svg";
 
 export const FALLBACK: IProviderInfo = {
   id: "injected",
@@ -229,4 +231,12 @@ export const PORTAL: IProviderInfo = {
   logo: PortalLogo,
   type: "injected",
   check: "isPortal"
+};
+
+export const AUROX: IProviderInfo = {
+  id: "injected",
+  name: "Aurox",
+  logo: AuroxLogo,
+  type: "injected",
+  check: "isAurox"
 };

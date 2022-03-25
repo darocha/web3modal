@@ -13,6 +13,7 @@ import bitski from "./bitski";
 import frame from "./frame";
 import binancechainwallet from "./binancechainwallet";
 import walletlink from "./walletlink";
+import aurox from "./aurox";
 
 export {
   injected,
@@ -29,5 +30,6 @@ export {
   bitski,
   frame,
   binancechainwallet,
-  walletlink
+  walletlink,
+  aurox
 };
