@@ -159,8 +159,8 @@ export const WALLETLINK: IProviderInfo = {
   }
 };
 
-export const AUROXWALLET: IProviderInfo = {
-  id: "auroxwallet",
+export const AUROX: IProviderInfo = {
+  id: "aurox",
   name: "Aurox Wallet",
   logo: AuroxLogo,
   type: "injected",

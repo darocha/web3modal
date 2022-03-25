@@ -1,7 +1,7 @@
-const AuroxWalletConnector = async () => {
+const ConnectToAurox = async () => {
   let provider = null;
   if (typeof (window as any).Aurox !== 'undefined') {
-    provider = (window as any).Aurox;
+    provider = (window as any).Aurox.ethereum;
     try {
       await provider.request({ method: 'eth_requestAccounts' })
     } catch (error) {
@@ -13,4 +13,4 @@ const AuroxWalletConnector = async () => {
   return provider;
 };
 
-export default AuroxWalletConnector;
+export default ConnectToAurox;

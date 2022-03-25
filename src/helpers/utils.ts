@@ -13,7 +13,7 @@ import {
 
 export function checkInjectedProviders(): IInjectedProvidersMap {
   const result = {
-    injectedAvailable: !!window.ethereum || !!window.web3
+    injectedAvailable: !!(window as any).Aurox?.ethereum || !!window.ethereum || !!window.web3  
   };
   if (result.injectedAvailable) {
     let fallbackProvider = true;
@@ -41,7 +41,8 @@ export function checkInjectedProviders(): IInjectedProvidersMap {
 }
 
 export function verifyInjectedProvider(check: string): boolean {
-  return window.ethereum
+  return (window as any).Aurox ? (window as any).Aurox.ethereum[check] :
+    window.ethereum
     ? window.ethereum[check]
     : window.web3 &&
         window.web3.currentProvider &&
@@ -184,6 +185,7 @@ export function filterProviderChecks(checks: string[]): string {
   if (!!checks && checks.length) {
     if (checks.length > 1) {
       if (
+        checks[0] === injected.AUROX.check ||
         checks[0] === injected.METAMASK.check ||
         checks[0] === injected.CIPHER.check
       ) {
