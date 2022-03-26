@@ -161,7 +161,7 @@ export const WALLETLINK: IProviderInfo = {
 
 export const AUROX: IProviderInfo = {
   id: "aurox",
-  name: "Aurox Wallet",
+  name: "Aurox",
   logo: AuroxLogo,
   type: "injected",
   check: "isAurox",
